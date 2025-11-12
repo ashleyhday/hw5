@@ -15,6 +15,8 @@ document.querySelector("#play").addEventListener("click", function () {
 	video.autoplay = true;
 	video.loop = true;
 	video.play();
+	let currentVolume = (video.volume * 100).toFixed(0);
+	document.querySelector("#volume").innerHTML = currentVolume + "%";
 });
 
 document.querySelector("#pause").addEventListener("click", function () {
