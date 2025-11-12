@@ -65,11 +65,11 @@ document.querySelector("#mute").addEventListener("click", function () {
 
 document.querySelector("#slider").addEventListener("change", function () {
 	video = document.querySelector("#player1");
-	video.volume = this.value / 100;
+	let volume = this.value / 100;
 	document.querySelector("#volume").innerHTML = this.value + "%";
-	console.log("The current value is " + video.volume);
+	console.log("The current value is " + volume);
 	console.log(document.querySelector("#volume"));
-	console.log("The current value is " + video.volume);
+	console.log("The current value is " + volume);
 });
 
 
