@@ -63,17 +63,11 @@ document.querySelector("#mute").addEventListener("click", function () {
 	}
 });
 
-document.querySelector("#slider").addEventListener("input", function () {
-	video = document.querySelector("#player1");
-	volumeDisplay = document.querySelector("#volume");
-
-	newVolume = this.value / 100;
-	video.volume = newVolume;
-
-	volumeDisplay.textContent = `${this.value}%`;
-
-	console.log("Current volume:", video.volume);
+document.querySelector("#slider").addEventListener("change", function () {
+	video.volume = this.value / 100;
+	document.querySelector("#volume").innerHTML = this.value + "%";
 });
+
 
 document.querySelector("#vintage").addEventListener("click", function () {
 	video = document.querySelector("#player1");
